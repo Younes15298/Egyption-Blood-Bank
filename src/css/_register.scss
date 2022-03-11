@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$logo-red-color: #d61a1ac9;
+$border-color: #c0333398;
+$superlight1-grey: #f2f2f2;
+$superlight2-grey: #f1f1f1;
+$box-shadow: rgba(0, 0, 0, 0.377) 0px 5px 15px;
+$form-body-background-color: linear-gradient(
+  90deg,
+  rgba(225, 224, 224, 1) 0%,
+  rgba(237, 237, 236, 1) 100%
+);
+$--select-arrow: var(--select-border);
+@mixin register {
+  * {
+    font-family: "Poppins";
+  }
+  .form-body {
+    width: 100%;
+    height: fit-content !important;
+    background: rgb(225, 224, 224);
+    background: $form-body-background-color;
+  }
+
+  .top-padding {
+    padding: 9% 50px 9% 50px;
+  }
+  .card {
+    max-width: 1360px !important;
+    background-color: $superlight1-grey;
+    border-radius: 20px !important;
+    text-align: center;
+    box-shadow: $box-shadow;
+    height: 720px;
+    margin: 0 auto;
+
+    .left-side {
+      height: 719px;
+    }
+
+    .image {
+      background: url(../assets/imgs/form.png) no-repeat center !important;
+      width: 100% !important;
+      height: 100% !important;
+      border-radius: 20px 0px 0px 20px !important;
+    }
+    .right-side {
+      position: relative;
+    }
+
+    .forms {
+      position: absolute;
+      top: 3%;
+      width: 96.5%;
+      max-width: 1000px;
+      height: 670px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center !important;
+      justify-content: center !important;
+      background-color: $superlight2-grey;
+      box-shadow: $box-shadow;
+
+      .title {
+        margin: 0 auto;
+        h1 {
+          color: $logo-red-color;
+          font-weight: 800;
+        }
+        h5 {
+          color: $logo-red-color;
+          margin-bottom: 20px;
+        }
+      }
+
+      .input-type {
+        width: 90% !important;
+        height: 30px;
+      }
+      input {
+        border: 3px solid $border-color;
+        border-radius: 8px;
+        position: relative;
+        margin-bottom: 15px;
+        height: 40px;
+
+        &::placeholder {
+          font-weight: 600;
+          opacity: 0.8;
+          font-size: large;
+        }
+      }
+
+      #inputState {
+        padding: 0 10px !important;
+        width: 100% !important;
+        font-size: large;
+        font-weight: 600;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.479);
+        height: 40px;
+        border: 3px solid $border-color;
+        border-radius: 8px;
+      }
+
+      .form-control[type="file"]:not(:disabled):not([readonly]) {
+        width: 100% !important;
+        margin-left: 9% !important;
+        height: 35px !important;
+      }
+      .uploud {
+        font-size: large !important;
+        font-weight: 600 !important;
+        opacity: 0.6 !important;
+        margin-top: 5px;
+        width: 150px;
+        margin-left: 35px;
+      }
+      #formFile {
+        line-height: 1 !important;
+
+        font-size: large !important;
+        font-weight: 600 !important;
+        color: $logo-red-color;
+        background-color: white !important;
+      }
+
+      .gender-radio {
+        h6 {
+          font-size: large !important;
+          font-weight: 600 !important;
+          color: rgba(0, 0, 0, 0.479);
+          margin-left: 35px;
+        }
+        .genders {
+          margin-left: 80px;
+        }
+        .gender-style {
+          font-size: large !important;
+          font-weight: 600 !important;
+        }
+
+        .gender {
+          position: relative !important;
+          left: 7px;
+          bottom: 7px;
+          width: 15px !important;
+          &:checked {
+            accent-color: $logo-red-color;
+          }
+        }
+      }
+
+      .select {
+        width: 50px !important;
+
+        &:checked {
+          background-color: red !important;
+        }
+        option {
+          font-size: large !important;
+          font-weight: 300 !important;
+        }
+      }
+    }
+
+    #gender {
+      position: relative;
+      width: 15px !important;
+      margin-left: 20px !important;
+
+      &:checked {
+        accent-color: $logo-red-color;
+      }
+    }
+    #submit {
+      position: absolute;
+      bottom: 10px;
+      right: 20px;
+      background-color: white;
+      color: $logo-red-color;
+      border: 0 !important;
+      font-size: large !important;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      width: 150px !important;
+      height: 50px;
+      border-radius: 10px !important;
+      &:hover {
+        background-color: $logo-red-color;
+        color: white;
+      }
+    }
+    #flexCheckDefault {
+      width: 20px !important;
+      min-width: 20px !important;
+      accent-color: red !important;
+    }
+    .check-label {
+      max-width: 600px !important;
+      text-align: start;
+      margin-left: 20px;
+      margin-top: 2px;
+      opacity: 0.7;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .form-body {
+      height: fit-content !important;
+    }
+
+    .card {
+      max-width: 600px !important;
+      border-radius: 20px !important;
+      box-shadow: $box-shadow;
+      height: 1200px;
+
+      .left-side {
+        height: 250px;
+        background-color: white !important;
+        border-radius: 20px 20px 0px 0px !important;
+      }
+
+      .image {
+        background: url(../assets/imgs/form.png) no-repeat !important;
+        background-position-x: center !important;
+        background-position-y: -60px !important;
+      }
+    }
+    .card .forms .form-control[type="file"]:not(:disabled):not([readonly]) {
+      width: 55% !important;
+      height: 35px !important;
+    }
+    .forms {
+      height: 940px !important;
+      box-shadow: none !important;
+      .title {
+        h1 {
+          font-size: 32px;
+        }
+        h5 {
+          margin-bottom: 20px;
+        }
+      }
+      .date {
+        margin-top: 15px !important;
+      }
+
+      .uploud {
+        margin-left: 10px !important;
+      }
+      #number {
+        margin-top: 15px;
+      }
+    }
+
+    #submit {
+      position: relative !important;
+      margin: 40px auto 0px auto !important;
+      font-size: large !important;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      width: 300px !important;
+      height: 65px !important;
+      padding: 0 20px !important;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    .form-body {
+      height: fit-content !important;
+    }
+    .top-padding {
+      padding: 50px 10px 50px 10px !important;
+    }
+    .card {
+      max-width: 350px !important;
+      border-radius: 20px !important;
+      box-shadow: $box-shadow;
+      height: 1200px;
+
+      .left-side {
+        border-radius: 20px 20px 0px 0px !important;
+      }
+
+      .image {
+        background-position-y: -30px !important;
+        background-size: 130% !important;
+        border-radius: 20px 20px 0px 0px !important;
+      }
+      .forms {
+        height: 800px !important;
+        width: 90% !important;
+        box-shadow: none !important;
+        padding-top: 100px !important;
+
+        .title {
+          h1 {
+            font-size: 25px;
+            width: 90%;
+            margin: 0 auto;
+          }
+          h5 {
+            margin-bottom: 20px;
+            font-size: 18px !important;
+            width: 75%;
+            margin: 0 auto 15px auto;
+          }
+        }
+        input {
+          width: 100% !important;
+          margin: 0 auto 15px auto;
+        }
+        #inputState {
+          width: 100% !important;
+          margin: 0 auto;
+        }
+        .date {
+          margin-top: 15px !important;
+        }
+
+        .uploud {
+          margin-left: 8px !important;
+        }
+
+        .form-control[type="file"]:not(:disabled):not([readonly]) {
+          display: block;
+          width: 70% !important;
+          height: 35px !important;
+        }
+        .form-checkk {
+          margin: 0 auto !important;
+          width: 90% !important;
+
+          #flexCheckDefault {
+            min-width: 15px !important;
+          }
+          .check-label {
+            max-width: 500px !important;
+            text-align: start;
+            margin-left: 20px;
+            margin-top: 9px;
+            font-size: small;
+          }
+        }
+      }
+    }
+    h6 {
+      font-size: large !important;
+      font-weight: 600 !important;
+      color: rgba(0, 0, 0, 0.479);
+      margin-left: 10px !important;
+    }
+
+    .genders {
+      margin-left: 8px !important;
+      position: relative;
+      bottom: 3px;
+    }
+    #submit {
+      position: relative !important;
+      left: 5px !important;
+    }
+  }
+}

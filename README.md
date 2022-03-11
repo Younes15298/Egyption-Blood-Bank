@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# Egyption-Blood-Bank
 
-![This is an image](src/assets/imgs/cover.jpeg)
+![This is an image](src/assets/imgs/EBB%20e.png)

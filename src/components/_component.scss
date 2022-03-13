@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+$font-family: "Poppins";
+$logo-red-color: #d61a1ac9;
+$border-color: #c0333398;
+$superlight1-grey: #f2f2f2;
+$superlight2-grey: #f1f1f1;
+$box-shadow: rgba(0, 0, 0, 0.377) 0px 5px 15px;
+$form-body-background-color: linear-gradient(
+  90deg,
+  rgba(225, 224, 224, 1) 0%,
+  rgba(237, 237, 236, 1) 100%
+);
+
+* {
+  font-family: $font-family;
+}
+h1,
+h5 {
+  color: $logo-red-color;
+}
+h1 {
+  font-weight: 800;
+}
+
+//-------- in card--------------------------------------------------------
+
+.form-body {
+  width: 100%;
+  height: fit-content !important;
+  background: rgb(225, 224, 224);
+  background: $form-body-background-color;
+}
+
+@mixin input {
+  input {
+    position: relative;
+    border: 3px solid $border-color;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    height: 40px;
+
+    &::placeholder {
+      font-weight: 600;
+      opacity: 0.8;
+      font-size: large;
+    }
+  }
+}
+
+@mixin submit-button {
+  #submit {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: white;
+    color: $logo-red-color;
+    border: 0 !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    width: 150px !important;
+    height: 50px;
+    border-radius: 10px !important;
+    transition: 500ms !important;
+    &:hover {
+      background-color: $logo-red-color;
+      color: white;
+      transition: 500ms !important;
+    }
+  }
+}
+//-------- end card--------------------------------------------------------

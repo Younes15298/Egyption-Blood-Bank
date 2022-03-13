@@ -1,5 +1,5 @@
 import React from "react";
-// import "./register.css";
+import "./register.css";
 function Register() {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -176,10 +176,10 @@ function Register() {
                         </button>
                       </div>
                       {/*--------------------- rout to log in ----------------------- */}
-                      <a href="url" className="login">
-                        <span>Already have an account</span>
-                        Login
-                      </a>
+                      <div className="login d-flex">
+                        <p>Already have an account </p>
+                        <a href="url"> Login</a>
+                      </div>
                     </form>
                   </div>
                 </div>

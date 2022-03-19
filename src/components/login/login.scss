@@ -51,10 +51,10 @@
         }
       }
 
-      .input-type {
+      /*.input-type {
         width: 40% !important;
         height: 300px;
-      }
+      }*/
       @include input();
 
       #inputState {

@@ -1,0 +1,14 @@
+$mediaWidth: (
+  sm: 650px,
+  md: 992px,
+);
+@mixin md {
+  @media (max-width: map-get($mediaWidth,"md")) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: map-get($mediaWidth,"sm")) {
+    @content;
+  }
+}

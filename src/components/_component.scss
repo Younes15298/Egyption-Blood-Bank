@@ -1,3 +1,4 @@
+@import "./mixin";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 $font-family: "Poppins";
 $logo-red-color: #d61a1ac9;
@@ -20,16 +21,160 @@ h5 {
 h1 {
   font-weight: 800;
 }
-
-//-------- in card--------------------------------------------------------
-
-.form-body {
-  width: 100%;
-  height: fit-content !important;
-  background: rgb(225, 224, 224);
+body {
   background: $form-body-background-color;
 }
 
+@mixin TopPadding {
+  .top-padding {
+    padding: 0 50px 0 50px;
+    @include sm {
+      padding: 50px 10px 50px 10px !important;
+    }
+  }
+}
+
+@mixin card {
+  .card {
+    margin-top: 15vh !important;
+    max-width: 1360px !important;
+    background-color: $superlight1-grey;
+    border-radius: 20px !important;
+    text-align: center;
+    box-shadow: $box-shadow;
+    height: 720px;
+    margin: 0 auto;
+    @content;
+    @include md {
+      max-width: 600px !important;
+      border-radius: 20px !important;
+      box-shadow: $box-shadow;
+      height: 1200px;
+    }
+    @include sm {
+      max-width: 350px !important;
+      border-radius: 20px !important;
+      box-shadow: $box-shadow;
+      height: 1220px;
+    }
+  }
+}
+
+@mixin leftside() {
+  .left-side {
+    height: 719px;
+  }
+
+  .image {
+    background: url(../assets/imgs/form.png) no-repeat center !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px 0px 0px 20px !important;
+  }
+  @include md {
+    @include leftSide-mediaQ(
+      250px,
+      white,
+      20px 20px 0px 0px,
+      center,
+      -70px,
+      90%
+    );
+  }
+  @include sm {
+    @include leftSide-mediaQ(
+      250px,
+      white,
+      20px 20px 0px 0px,
+      center,
+      -30px,
+      130%
+    );
+  }
+}
+
+@mixin leftSide-mediaQ(
+  $height,
+  $background-color,
+  $border-radius,
+  $position-x,
+  $position-y,
+  $size
+) {
+  .left-side {
+    height: $height;
+    background-color: $background-color !important;
+    border-radius: $border-radius;
+  }
+  .image {
+    background-position-x: $position-x !important;
+    background-position-y: $position-y !important;
+    background-size: $size !important;
+  }
+}
+
+@mixin title {
+  .title {
+    margin: 0 auto;
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
+  @include md {
+    .title {
+      h1 {
+        font-size: 32px;
+      }
+      h5 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @include sm {
+    .title {
+      h1 {
+        font-size: 25px;
+        width: 90%;
+        margin: 0 auto;
+      }
+      h5 {
+        margin-bottom: 20px;
+        font-size: 18px !important;
+        width: 75%;
+        margin: 0 auto 15px auto;
+      }
+    }
+  }
+}
+
+@mixin forms {
+  .forms {
+    position: absolute;
+    top: 3%;
+    width: 95%;
+    max-width: 1000px;
+    height: 670px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: $superlight2-grey;
+    box-shadow: $box-shadow;
+    @content;
+
+    @include md {
+      height: 940px !important;
+      box-shadow: none !important;
+    }
+    @include sm {
+      margin: 30px 0;
+      height: 800px !important;
+      width: 90% !important;
+
+      padding-top: 100px !important;
+    }
+  }
+}
 @mixin submit-button {
   #submit {
     position: absolute;
@@ -49,6 +194,152 @@ h1 {
       color: white;
       transition: 500ms !important;
     }
+
+    @include md {
+      position: unset !important;
+      margin: 25px auto 15px auto !important;
+      font-size: large !important;
+      font-weight: 600 !important;
+      font-size: 20px !important;
+      width: 300px !important;
+      height: 65px !important;
+      padding: 0 20px !important;
+    }
   }
 }
-//-------- end card--------------------------------------------------------
+@mixin gender {
+  .gender-radio {
+    h6 {
+      font-size: large !important;
+      font-weight: 600 !important;
+      color: rgba(0, 0, 0, 0.479);
+      margin-left: 35px;
+      @include sm {
+        margin-left: 10px !important;
+      }
+    }
+    .genders {
+      margin-left: 80px;
+      @include sm {
+        margin-left: 8px !important;
+        position: relative;
+        bottom: 3px;
+      }
+    }
+    .gender-style {
+      font-size: large !important;
+      font-weight: 600 !important;
+    }
+
+    .gender {
+      position: relative !important;
+      left: 7px;
+      bottom: 7px;
+      width: 15px !important;
+      &:checked {
+        accent-color: $logo-red-color;
+      }
+    }
+  }
+  #gender {
+    position: relative;
+    width: 15px !important;
+    margin-left: 20px !important;
+
+    &:checked {
+      accent-color: $logo-red-color;
+    }
+  }
+}
+@mixin terms-condetion {
+  .form-checkk {
+    @include sm {
+      margin: 0 auto !important;
+      width: 90% !important;
+    }
+  }
+
+  #flexCheckDefault {
+    width: 20px !important;
+    min-width: 20px !important;
+    accent-color: red !important;
+    @include sm {
+      min-width: 15px !important;
+    }
+  }
+
+  .check-label {
+    max-width: 600px !important;
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 2px;
+    opacity: 0.7;
+    @include sm {
+      max-width: 500px !important;
+      text-align: start;
+      margin-left: 20px;
+      margin-top: 9px;
+      font-size: small;
+    }
+  }
+}
+
+@mixin route {
+  .login {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    cursor: pointer;
+    p {
+      position: relative;
+      top: 2px;
+      font-size: small;
+      opacity: 0.7;
+    }
+    a {
+      text-decoration: none;
+      color: $logo-red-color;
+      margin-left: 5px;
+      font-size: medium;
+      transition: 200ms !important;
+    }
+    &:hover {
+      a {
+        margin-left: 20px;
+        color: #219105c9 !important;
+      }
+    }
+  }
+
+  @include md {
+    .login {
+      position: unset !important;
+      margin: 0 auto !important;
+      padding: 10px 10px !important;
+      background-color: rgb(255, 255, 255);
+      font-size: small !important;
+      border-radius: 10px;
+      width: 250px;
+      justify-content: center;
+      text-align: center;
+
+      P {
+        margin-bottom: 0px !important;
+      }
+      a {
+        margin-left: 5px !important;
+        transition: 0ms !important;
+      }
+      &:hover {
+        background-color: $logo-red-color;
+        color: white;
+        p {
+          opacity: 1 !important;
+        }
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}

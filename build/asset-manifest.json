@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.deb01fdd.css",
+    "main.js": "/static/js/main.b6392ef2.js",
+    "static/js/787.10c27f2c.chunk.js": "/static/js/787.10c27f2c.chunk.js",
+    "static/media/auth_bg.jpg": "/static/media/auth_bg.e4411aa74e8537928190.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/simple-Line-Icons.svg": "/static/media/simple-Line-Icons.32be9ff205347340800e.svg",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/weathericons-regular-webfont.svg": "/static/media/weathericons-regular-webfont.c3aa7bd3a5200ff8e721.svg",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/weathericons-regular-webfont.ttf": "/static/media/weathericons-regular-webfont.520c26b13fefaeef5c94.ttf",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/simple-Line-Icons.woff": "/static/media/simple-Line-Icons.d25156c933f09bb78bba.woff",
+    "static/media/weathericons-regular-webfont.woff": "/static/media/weathericons-regular-webfont.e4d2c00ed56824803ce0.woff",
+    "static/media/weathericons-regular-webfont.eot": "/static/media/weathericons-regular-webfont.db8e6bec2adb2a3e2779.eot",
+    "static/media/simple-Line-Icons.eot": "/static/media/simple-Line-Icons.37c20767490388888f44.eot",
+    "static/media/simple-Line-Icons.ttf": "/static/media/simple-Line-Icons.549254fc1514a6148dbf.ttf",
+    "static/media/user.png": "/static/media/user.ce8ac6aa15a5c0276fee.png",
+    "static/media/weather_img.jpg": "/static/media/weather_img.a4e55a82222df0cd6baf.jpg",
+    "static/media/logo-white.svg": "/static/media/logo-white.52826caf0f3fe5896bcde33e509104d1.svg",
+    "static/media/logo.svg": "/static/media/logo.5d9e4fc8d229e83ba2bee55a6b981eba.svg",
+    "index.html": "/index.html",
+    "main.deb01fdd.css.map": "/static/css/main.deb01fdd.css.map",
+    "main.b6392ef2.js.map": "/static/js/main.b6392ef2.js.map",
+    "787.10c27f2c.chunk.js.map": "/static/js/787.10c27f2c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.deb01fdd.css",
+    "static/js/main.b6392ef2.js"
+  ]
+}
